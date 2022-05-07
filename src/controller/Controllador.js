@@ -49,7 +49,7 @@ export const getDeletar = async (req, res) => {
 }
 
 export const getCriar = (req, res) => {
-    res.render('criar.ejs')
+    res.render('criar.ejs', {isAdded: false})
 }
 
 export const postCriar = async (req, res) => {
@@ -60,7 +60,7 @@ export const postCriar = async (req, res) => {
             res.send('Todos os campos são obrigatórios!')
         } else {
             await filmes.create({nome, diretor, img, duracao, ano, iframe})
-            res.render('criar.ejs')
+            res.render('criar.ejs', {isAdded: true})
         }
     }
     catch(error){

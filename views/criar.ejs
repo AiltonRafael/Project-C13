@@ -54,6 +54,15 @@
         </section>
     </main>
     <%- include('./partials/footer.ejs') %>
+    <% if (isAdded) { %>
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Sucesso!!!',
+                text: 'Item enviado!!!',
+            })
+        </script>
+    <% } %>
 </body>
 
 </html>
