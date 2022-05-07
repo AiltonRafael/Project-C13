@@ -6,7 +6,7 @@ import {
     getCriar,
     postCriar,
     getEditar,
-    postEditar
+    postEditar,
 } from '../controller/Controllador.js'
 
 
