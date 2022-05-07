@@ -39,8 +39,8 @@ export const filmes = connection.define('filmes', {
     timestamps: false
 })
 
-function initTable(){
-    filmes.async()
+const initTable = async () => {
+    await Filmes.sync()
 }
 
 initTable()
